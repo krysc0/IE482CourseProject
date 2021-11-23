@@ -1,90 +1,38 @@
-*NOTE TO STUDENTS:  This is a template for your **proposal**.  Items wrapped inside `{}` should be replaced accordingly.*
-
-*Your updated proposal document (this file) is due on Tuesday, November 23, at 2:20pm.*
-
-**Please delete this line, and the comments above.**
-
---- 
-
-# {Provide a Project Title Here}
+# Indutrial Automation Using a Robotic Arm
 
 Team Members:
-- {Member 1 Name}, {Member 1 email}
-- {Member 2 Name}, {Member 2 email}
+- Krystal Coleman, kc64739@buffalo.edu
+- Omar-Ibne Shahid, omaribne@buffalo.edu
 
 --- 
 
 ## Project Objective
-{What are you proposing to do?}
-
+This project will simulate the autonomous operation  in a warehouse in Gazebo of a robotic arm to sort inventory incoming on a conveyor belt. 
 
 ## Contributions
-{What is new/unique/interesting about this project?}
-
+The Fetch robot will be used to simulate operations in an industrial environment. This can help increase efficiency.
 
 ## Project Plan
-{How will we do it?  What resources will we use (e.g., specific online materials, specific chapters from the textbook, etc.)?}
-
+The redball code from Fall 2018 will be adjusted to create an object moving as if on a conveyor belt. 
+The Fetch Robot manual, Moveit tutorial and code from other projects done with Fetch will be used as guidance when instructing the robot.
+Chapter 12 and 14 of textbook will us create and use distinguishing features on the models so that the robot can sort objects according to their features.   
 
 ## Milestones/Schedule Checklist
 {What are the tasks that you need to complete?  Who is going to do them?  When will they be completed?}
-- [x] Complete this proposal document.  *Due Nov. 2*
-- [ ] {add tasks here}
-- [ ] Create progress report.  *Due Nov. 20*
-- [ ] {add more tasks here}
-- [ ] Create final presentation.  *Due Dec. 4*
-- [ ] {you might have some more tasks here}
-- [ ] Provide system documentation (README.md).  *Due Dec. 14*
+- [x] Complete this proposal document.  *Due Nov. 23* 
+- [ ] Determine functions of the robotic arm, topics robotic arm uses and their rates *Due Nov 25* `Krystal`
+- [ ] Create a gazebo world with objects moving as on a conveyor belt *Due Nov 25* `Omar`
+- [ ] Direct robotic arm to perform pick of stationary object *Due Nov 30* `Krystal`
+- [ ] Direct robotic arm to place object in pre-specified location *Due Nov 30* `Omar`
+- [ ] Direct robotic arm to perform pick and place task of mobile object *Due Dec 7* `Krystal`
+- [ ] (Bonus) Direct robotic arm to differentiate between objects and place in different locations *Due Dec 7* `Omar`
+- [ ] Create final demonstration  *Due Dec. 9* `Both of us`
+- [ ] Create final report  *Due Dec. 15* `Both of us`
 
 
 ## Measures of Success
-{How will you know you succeeded?  If you were to receive partial credit, what should we look for?}
-
-
----
-**A Sample Proposal Appears Below**
----
-
-# Creating a Gazebo Model of the Duckiebot
-
-Team Members:
-- Chase Murray, cmurray3@buffalo.edu
-- Jane Student, j@buffalo.edu
-
-
-## Project Objective
-The goal of this project is to create a Gazebo model of the Duckiebot. This model will accurately reflect the dimensions of the Duckiebot, will include the Duckiebot's sensors (a fisheye lens camera and a magnetometer), and will have the same drive train (two motors controlling the two motorized wheels).
-
-
-## Contributions
-There are currently no Gazebo models of this robot.  By creating such a model, we will be able to test control algorithms in a simulated environment (without the need for the physical robot itself).  However, after training the control algorithms in Gazebo, it will be easy to execute them on a real Duckiebot, since the simulated version will be an accurate representation.
-
-
-## Project Plan
-The textbook contains two chapters (Chapters 15--17) that describe how to build a custom robot.
-However, these chapters do not discuss the use of a fisheye lens.  We will use the ros.org Website to learn how to model such cameras.
-We will also consult the Duckiebot specs to determine the dimensions and weight of the robot, as well as the capabilities of the motors.
-
-
-## Milestones/Schedule Checklist
-- [x] Complete this proposal document.  *Due Nov. 2*
-- [ ] Capture the specs of the actual/physical robot.  *JS, Nov. 13*
-- [ ] Build a sample model using the textbook examples. *CM, Nov. 13*
-- [ ] Modify the sample model to match the specs of the Duckiebot.  *CM, Nov. 17*
-- [ ] Add a fisheye lens camera. *JS, Nov. 18*
-- [ ] Create progress report.  *Due Nov. 20*
-- [ ] Create Gazebo .launch files to test the robot.  *CM, Dec. 1*
-- [ ] Create a simple controller to test the interaction with the robot. *JS, Dec. 3*
-- [ ] Create final presentation.  *Due Dec. 4*
-- [ ] Update documentation based on presentation feedback. *CM, Dec. 7*
-- [ ] Provide system documentation (README.md).  *Due Dec. 14*
-
-
-## Measures of Success
-- [ ] View robot model in Gazebo.
-- [ ] Demonstrate that the fisheye lens camera is appropriately distorted.
-- [ ] Demonstrate that robot moves when given commands.
-- [ ] Implement code on a real Duckiebot.
-- [ ] Have a classmate follow the steps in the README to successfully run the simulation without any help.
-
-
+- [ ] Robotic arm can lift stationary object
+- [ ] Robotic arm can move to specific location and release object
+- [ ] Creation of conveyor belt in Gazebo
+- [ ] Robotic arm can pick and place objects that were initially moving
+- [ ] Robot can differentiate between items of different colors
