@@ -20,7 +20,7 @@ Chapter 12 and 14 of textbook will us create and use distinguishing features on 
 ## Milestones/Schedule Checklist
 {What are the tasks that you need to complete?  Who is going to do them?  When will they be completed?}
 - [x] Complete this proposal document.  *Due Nov. 23* 
-- [ ] Determine functions of the robotic arm, topics robotic arm uses and their rates *Due Nov 25* `Krystal`
+- [x] Determine functions of the robotic arm, topics robotic arm uses and their rates *Due Nov 25* `Krystal`
 - [ ] Create a gazebo world with objects moving as on a conveyor belt *Due Nov 25* `Omar`
 - [ ] Direct robotic arm to perform pick of stationary object *Due Nov 30* `Krystal`
 - [ ] Direct robotic arm to place object in pre-specified location *Due Nov 30* `Omar`
