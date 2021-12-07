@@ -17,8 +17,9 @@ When prompted to:
 Respond with `n` to both
 ### 3. Copy Interbotix Packages into catkin_ws
 ```
-cd ~
-cp -R ~/interbotix_ws/* ~/catkin_ws/src
+cd ~/catkin_ws
+source /opt/ros/noetic/setup.bash
+cp -r ~/interbotix_ws/* ~/catkin_ws/src
 ```
 ### 4. Clone Warehousebot Github 
 ```
