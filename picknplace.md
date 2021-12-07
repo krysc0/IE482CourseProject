@@ -33,8 +33,8 @@ cp -R ~/catkin_ws/src/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/war
 ### 5. Build the code
 ```
 cd ~/catkin_ws/
-rm build
-rm devel
+rm -r build
+rm -r devel
 catkin build
 ```
 ### 6. Launch Robot in Gazebo World and Rviz
