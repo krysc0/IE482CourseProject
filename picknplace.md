@@ -20,8 +20,6 @@ Respond with `n` to both
 cd ~
 cp -R ~/interbotix_ws/* ~/catkin_ws/src
 source /opt/ros/noetic/setup.bash
-cd catkin_ws
-catkin_make
 ```
 ### 4. Clone Warehousebot Github 
 ```
