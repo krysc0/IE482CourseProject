@@ -18,7 +18,7 @@ Respond with `n` to both
 ### 3. Copy Interbotix Packages into catkin_ws
 ```
 cd ~
-cp -R interbotix_ws catkin_ws/src
+cp -R ~/interbotix_ws/* ~/catkin_ws/src
 source /opt/ros/noetic/setup.bash
 cd catkin_ws
 catkin_make
