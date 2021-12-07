@@ -16,12 +16,14 @@ When prompted to:
 
 Respond with `n` to both
 ### 3. Copy Interbotix Packages into catkin_ws
+```
 cd ~
 cp -R interbotix_ws catkin_ws/src
 source /opt/ros/noetic/setup.bash
 cd catkin_ws
 catkin_make
-### 3. Clone Warehousebot Github 
+```
+### 4. Clone Warehousebot Github 
 ```
 cd catkin_ws/src
 catkin_create_pkg warehousebot
@@ -29,13 +31,13 @@ cd ~/Downloads
 git clone https://github.com/krysc0/IE482CourseProject.git
 cp -R ~/Downloads/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/warehousebot/
 ```
-### 4. Build the code
+### 5. Build the code
 ```
 cd catkin_ws
 catkin_make
 
 ```
-### 5. Launch Robot in Gazebo World and Rviz
+### 6. Launch Robot in Gazebo World and Rviz
 Open a new terminal, copy and paste the line below
 ```
 cd ~/catkin_ws
@@ -45,13 +47,13 @@ In a new terminal, copy and paste the lines below
 ```
 rosservice call /gazebo/unpause_physics
 ```
-### 6. Run Python Node to Create Conveyor Belt
+### 7. Run Python Node to Create Conveyor Belt
 ```
 roscd warehouesbot/scripts
 chmod +x conveyor.py
 rosrun warehousebot conveyor.py
 ```
-### 7. Run Python Node to Perform Pick and Place
+### 8. Run Python Node to Perform Pick and Place
 ```
 roscd warehouesbot/scripts
 chmod +x pick.py
