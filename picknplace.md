@@ -1,6 +1,8 @@
-### 1. Install Moveit 
+### 1. Install Moveit and Catkin Tools
 ```
 sudo apt install ros-noetic-moveit
+sudo apt-get install python3-catkin-tools
+
 ```
 ### 2. Install Packages for Interbotix Robots
 Copy the following code into a new terminal
