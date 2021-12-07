@@ -25,7 +25,7 @@ catkin_make
 ```
 ### 4. Clone Warehousebot Github 
 ```
-cd catkin_ws/src
+cd ~/catkin_ws/src
 catkin_create_pkg warehousebot
 cd ~/Downloads
 git clone https://github.com/krysc0/IE482CourseProject.git
