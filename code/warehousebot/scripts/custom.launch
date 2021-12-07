@@ -14,7 +14,7 @@
   <arg name="use_actual"                        default="false"/>
   <arg name="use_fake"                          default="false"/>
   <arg name="dof"                               default="5"/>
-  <arg name="world_name"                        default="$(find warehousebot)/world/my_world.world"/>
+  <arg name="world_name"                        default="$(find warehousebot)/scripts/my_world.world"/>
 
   <include if="$(arg use_gazebo)" file="$(find interbotix_xsarm_gazebo)/launch/xsarm_gazebo.launch">
     <arg name="robot_model"                       value="$(arg robot_model)"/>
