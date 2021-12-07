@@ -93,7 +93,7 @@
       <wall_time>1638683218 492829960</wall_time>
       <iterations>98470</iterations>
       <model name='barrier'>
-        <pose>-1.18923 0.524729 0.5 0 -0 0</pose>
+        <pose>-1.5923 0.524729 0.5 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose>-1.18923 0.524729 0.5 0 -0 0</pose>
@@ -103,7 +103,7 @@
         </link>
       </model>
       <model name='conveyor_belt'>
-        <pose>1.91834 0.617691 0.024629 0 -0 3e-06</pose>
+        <pose>1.91834 0.587691 0.024629 0 -0 3e-06</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose>1.91834 0.617691 0.024629 0 -0 3e-06</pose>
@@ -163,7 +163,7 @@
         </link>
       </model>
       <model name='euro_pallet'>
-        <pose>-0.036018 -0.708464 0 0 -0 0</pose>
+        <pose>-0.036018 -0.688464 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose>-0.036018 -0.708464 0 0 -0 0</pose>
