@@ -27,12 +27,12 @@ cd ~/catkin_ws/src
 catkin_create_pkg warehousebot
 git clone https://github.com/krysc0/IE482CourseProject.git
 cp -R ~/catkin_ws/src/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/warehousebot/
-cd ~/catkin_ws/src
-source /opt/ros/noetic/setup.bash
+cd ~/catkin_ws/
 ```
 ### 5. Build the code
 ```
-cd ~/catkin_ws
+catkin build warehousebot
+cd src
 catkin_make
 
 ```
