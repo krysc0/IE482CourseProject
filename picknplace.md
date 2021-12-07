@@ -33,7 +33,7 @@ cp -R ~/Downloads/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/warehou
 ```
 ### 5. Build the code
 ```
-cd catkin_ws
+cd ~/catkin_ws
 catkin_make
 
 ```
