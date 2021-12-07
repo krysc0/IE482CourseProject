@@ -19,7 +19,6 @@ Respond with `n` to both
 ```
 cd ~
 cp -R ~/interbotix_ws/* ~/catkin_ws/src
-source /opt/ros/noetic/setup.bash
 ```
 ### 4. Clone Warehousebot Github 
 ```
@@ -27,6 +26,8 @@ cd ~/catkin_ws/src
 catkin_create_pkg warehousebot
 git clone https://github.com/krysc0/IE482CourseProject.git
 cp -R ~/catkin_ws/src/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/warehousebot/
+cd ~/catkin_ws/src
+source /opt/ros/noetic/setup.bash
 ```
 ### 5. Build the code
 ```
