@@ -29,14 +29,13 @@ cd ~/catkin_ws/src
 catkin_create_pkg warehousebot
 git clone https://github.com/krysc0/IE482CourseProject.git
 cp -R ~/catkin_ws/src/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/warehousebot/
-cd ~/catkin_ws/
 ```
 ### 5. Build the code
 ```
-catkin build warehousebot
-cd src
-catkin_make
-
+cd ~/catkin_ws/
+rm build
+rm devel
+catkin build
 ```
 ### 6. Launch Robot in Gazebo World and Rviz
 Open a new terminal, copy and paste the line below
