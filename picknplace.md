@@ -66,9 +66,11 @@ echo 'source ~/ws_moveit/devel/setup.bash' >> ~/.bashrc
 ### 2. Install Packages for Interbotix Robots
 #### a. Installation
 Note. This installation may take up to 15 minutes
-Copy the following code into a new terminal
+Install curl
 ```
 sudo apt install curl
+```
+```
 curl 'https://raw.githubusercontent.com/Interbotix/interbotix_ros_manipulators/main/interbotix_ros_xsarms/install/amd64/xsarm_amd64_install.sh' > xsarm_amd64_install.sh
 chmod +x xsarm_amd64_install.sh
 ./xsarm_amd64_install.sh
@@ -78,25 +80,24 @@ When prompted to:
 * `Install the MATLAB API (requries that you have MATLAB installed on your system)?`
 
 Respond with `n` to both
-#### b. Source Workspace
-```
-echo 'source ~/interbotix_ws/devel/setup.bash' >> ~/.bashrc
-```
 ### 3. Get Warehousebot files 
 #### a. Clone github
 ```
 cd ~/catkin_ws/src
 catkin_create_pkg warehousebot
+cd warehousebot 
+mkdir scripts
+cd ~/catkin_ws/src
 git clone https://github.com/krysc0/IE482CourseProject.git
-cp -R ~/catkin_ws/src/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/warehousebot/
+cp -R ~/catkin_ws/src/IE482CourseProject/code/warehousebot/scripts/* ~/catkin_ws/src/warehousebot/scripts
 ```
 #### b. Build the catkin workspace
-This may take ~8 minutes to complete
 ```
 cd ~/catkin_ws/
 rm -r build
 rm -r devel
 catkin build
+source ~/catkin_ws/devel/setup.bash
 ```
 ---
 
