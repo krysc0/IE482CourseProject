@@ -26,11 +26,42 @@ List of Prerequisite Software:
 - Interbotix XS Manipulators
 - Gazebo
 
-### 1. Install Moveit and Catkin Tools
+### 1. Install Moveit from Source
+#### a. Make sure you have the latest versions of packages installed
 ```
-sudo apt install ros-noetic-moveit
-sudo apt-get install python3-catkin-tools
+rosdep update
+sudo apt update
+sudo apt dist-upgrade
+```
+#### b. Source installation requires wstool and catkin_tools
+```
+sudo apt install python3-catkin-tools
+sudo apt install python3-wstool
+```
+#### c. Create a new workspace and download moveit
+```
+mkdir -p ~/ws_moveit/src
+cd ~/ws_moveit/src
 
+wstool init .
+wstool merge -t . https://raw.githubusercontent.com/ros-planning/moveit/master/moveit.rosinstall
+wstool remove  moveit_tutorials  # this is cloned in the next section
+wstool update -t .
+```
+#### d. Build your caktin workspace
+```
+cd ~/ws_moveit/src
+rosdep install -y --from-paths . --ignore-src --rosdistro noetic
+```
+#### e. Configure catkin workspace (WARNING: This takes around 75 Minutes)
+```
+cd ~/ws_moveit
+catkin config --extend /opt/ros/${ROS_DISTRO} --cmake-args -DCMAKE_BUILD_TYPE=Release
+catkin build
+```
+#### f. Source the catkin workspace
+```
+echo 'source ~/ws_moveit/devel/setup.bash' >> ~/.bashrc
 ```
 ### 2. Install Gazebo ROS Packages
 ```
