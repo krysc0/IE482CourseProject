@@ -63,11 +63,8 @@ catkin build
 ```
 echo 'source ~/ws_moveit/devel/setup.bash' >> ~/.bashrc
 ```
-### 2. Install Gazebo ROS Packages
-```
-sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
-```
 ### 2. Install Packages for Interbotix Robots
+#### a. Installation
 Note. This installation may take up to 15 minutes
 Copy the following code into a new terminal
 ```
@@ -81,21 +78,20 @@ When prompted to:
 * `Install the MATLAB API (requries that you have MATLAB installed on your system)?`
 
 Respond with `n` to both
-### 3. Copy Interbotix Packages into catkin_ws
+#### b. Source Workspace
 ```
-cd ~/catkin_ws
-source /opt/ros/noetic/setup.bash
-cp -r ~/interbotix_ws/* ~/catkin_ws/src
+echo 'source ~/interbotix_ws/devel/setup.bash' >> ~/.bashrc
 ```
-### 4. Clone Warehousebot Github 
+### 3. Get Warehousebot files 
+#### a. Clone github
 ```
 cd ~/catkin_ws/src
 catkin_create_pkg warehousebot
 git clone https://github.com/krysc0/IE482CourseProject.git
 cp -R ~/catkin_ws/src/IE482CourseProject/code/warehousebot/* ~/catkin_ws/src/warehousebot/
 ```
-### 5. Build the code
-Note. This may take up to 10 minutes to complete
+#### b. Build the catkin workspace
+This may take ~8 minutes to complete
 ```
 cd ~/catkin_ws/
 rm -r build
@@ -111,17 +107,19 @@ Open a new terminal, copy and paste the line below
 cd ~/catkin_ws
 roslaunch warehousebot custom.launch robot_model:=px100 use_gazebo:=true dof:=4
 ```
-In a new terminal, copy and paste the lines below
+In Terminal 2
 ```
 rosservice call /gazebo/unpause_physics
 ```
 ### 2. Run Python Node to Create Conveyor Belt
+In Terminal 3
 ```
 roscd warehousebot/scripts
 chmod +x conveyor.py
 rosrun warehousebot conveyor.py
 ```
 ### 3. Run Python Node to Perform Pick and Place
+In Terminal 4
 ```
 roscd warehousebot/scripts
 chmod +x pick.py
@@ -186,3 +184,6 @@ press `Ctrl-C` and wait for the processes to end
 *What resources did you use to help finish this project?*
 - Include links to Websites.  Explain what this Website enabled you to accomplish.
 - Include references to particular chapters/pages from the ROS book.  Why was each chapter necessary/helpful?
+
+
+
