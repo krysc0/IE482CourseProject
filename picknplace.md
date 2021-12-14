@@ -97,7 +97,10 @@ cd ~/catkin_ws/
 rm -r build
 rm -r devel
 catkin build
-source ~/catkin_ws/devel/setup.bash
+```
+#### c. Source the workspace
+```
+echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
 ```
 ---
 
@@ -105,8 +108,8 @@ source ~/catkin_ws/devel/setup.bash
 ### 1. Launch Robot in Gazebo World and Rviz
 Open a new terminal, copy and paste the line below
 ```
-cd ~/catkin_ws
-roslaunch warehousebot custom.launch robot_model:=px100 use_gazebo:=true dof:=4
+source ~/catkin_ws/devel/setup.bash
+roslaunch warehousebot custom.launch
 ```
 In Terminal 2
 ```
@@ -115,6 +118,7 @@ rosservice call /gazebo/unpause_physics
 ### 2. Run Python Node to Create Conveyor Belt
 In Terminal 3
 ```
+source ~/catkin_ws/devel/setup.bash
 roscd warehousebot/scripts
 chmod +x conveyor.py
 rosrun warehousebot conveyor.py
@@ -122,6 +126,7 @@ rosrun warehousebot conveyor.py
 ### 3. Run Python Node to Perform Pick and Place
 In Terminal 4
 ```
+source ~/catkin_ws/devel/setup.bash
 roscd warehousebot/scripts
 chmod +x pick.py
 ROS_NAMESPACE=px100 rosrun warehousebot pick.py 
@@ -185,6 +190,3 @@ press `Ctrl-C` and wait for the processes to end
 *What resources did you use to help finish this project?*
 - Include links to Websites.  Explain what this Website enabled you to accomplish.
 - Include references to particular chapters/pages from the ROS book.  Why was each chapter necessary/helpful?
-
-
-
