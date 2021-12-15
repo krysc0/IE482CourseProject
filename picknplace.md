@@ -195,5 +195,5 @@ press `Ctrl-C` and wait for the processes to end
 ## References/Resources
 
 *What resources did you use to help finish this project?*
-- Include links to Websites.  Explain what this Website enabled you to accomplish.
-- Include references to particular chapters/pages from the ROS book.  Why was each chapter necessary/helpful?
+- `https://github.com/Interbotix` Specifically the interbotix_ros_manipulators and interbotix_ros_toolboxes repositories
+- `https://ros-planning.github.io/moveit_tutorials/` Specifically the Move Group Python Interface 
