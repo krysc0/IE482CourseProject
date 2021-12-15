@@ -156,6 +156,15 @@ press `Ctrl-C` and wait for the processes to end
 **NB:This is totally sperated from previous sections, one can run only this section of tutorial to see the basic functions of the robot, don't need to run previous sections.**
 
 ### 1. Downloads and Installation
+```
+cd ~
+git clone https://github.com/Interbotix/interbotix_ros_manipulators.git
+```
+
+```
+cd ~
+cd interbotix_ros_manipulators\interbotix_ros_xsarms
+```
 
 
 ### 2. Running commands for movement
