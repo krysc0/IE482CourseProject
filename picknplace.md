@@ -153,6 +153,7 @@ press `Ctrl-C` and wait for the processes to end
 
 ## Additional Section - Guideline to play with the basic functions of the robot
 
+
 **NB:This is totally sperated from previous sections, one can run only this section of tutorial to see the basic functions of the robot, don't need to run previous sections.**
 
 ### 1. Downloads and Installation
