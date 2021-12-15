@@ -80,6 +80,13 @@ When prompted to:
 * `Install the MATLAB API (requries that you have MATLAB installed on your system)?`
 
 Respond with `n` to both
+#### b. Edit the Kinematics Configuration File
+```
+pico interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/interbotix_xsarm_moveit/config/kinematics.yaml
+```
+Find and replace `position_only_ik: false`
+with `position_only_ik: true`
+
 ### 3. Get Warehousebot files 
 #### a. Clone github
 ```
