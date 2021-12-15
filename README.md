@@ -140,11 +140,6 @@ In the same terminal you launched the pick and place node
 press `Ctrl+C` and wait for the processes to end
 Then return to the terminal you launched Gazebo in
 press `Ctrl-C` and wait for the processes to end
-*Provide detailed step-by-step instructions to run your code.*
-
-*NOTE 1:  At this point, the user should have already installed the necessary code.  This section should simply describe the steps for RUNNING your project.*  
-
-*NOTE 2:  If you're generating mazes, for example, the task of GENERATING a new maze would go here.*
 
 ---
 
