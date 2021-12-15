@@ -166,10 +166,10 @@ roslaunch interbotix_xsarm_gazebo xsarm_gazebo.launch robot_model:=wx200 dof:=5 
 2. Open another terminal, run the following commands to see what topics you have in this arm.
 ```
 rosservice call /gazebo/unpause_physics
-``
+```
 ```
 rostopic list
-``
+```
 Here, we will use wrist_angle_controller, elbow_controller, waist_controller, left_finger_controller, and right_finger_controller.
 
 3. Move the wrist
