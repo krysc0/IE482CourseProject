@@ -10,13 +10,10 @@ Team Members:
 
 ## Project Description
 
-*In this section, describe what your project does. This should be descriptive.  Someone from next year's class should be able to fully understand the aims and scope of your project. I highly recommend using pictures to help explain things.  Maybe even post a YouTube video showing your code in action.*
-
-*NOTE:  This is not a proposal.  This is a final report describing your actual completed project.*
+Our project is about simulate a robotic arm in gazebo performing pick and place task. We have used interbotix robotics arm and a customized gazebo world with conveyor belt. We used moveit platform to interact with gazebo.
 
 ### Contributions
-
-*In this subsection, I want to know what is new/unique/interesting about your project.*
+One of the main contribution of our project is there is no sufficient resource to work with robotic arm in a moving object platform in ROS Noetic. Our project will provide a head start to those who wants to work with industrial automation in ROS Noetic.
 
 ---
 
