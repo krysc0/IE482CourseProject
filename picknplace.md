@@ -151,44 +151,107 @@ press `Ctrl-C` and wait for the processes to end
 
 ---
 
+## Bonus Section - Guideline to play with the basic functions of the robot
+
+**NB:This is totally sperated from previous sections, one can run only this section of tutorial to see the basic functions of the robot, don't need to run previous sections.**
+
+### 1. Downloads and Installation
+
+
+### 2. Running commands for movement
+1. Launching the world
+```
+roslaunch interbotix_xsarm_gazebo xsarm_gazebo.launch robot_model:=wx200 dof:=5 use_position_controllers:=true
+```
+2. Open another terminal, run the following commands to see what topics you have in this arm.
+```
+rosservice call /gazebo/unpause_physics
+``
+```
+rostopic list
+``
+Here, we will use wrist_angle_controller, elbow_controller, waist_controller, left_finger_controller, and right_finger_controller.
+
+3. Move the wrist
+```
+rostopic pub -1 /wx200/wrist_angle_controller/command std_msgs/Float64 "data: -1.0"
+```
+4. Move elbow
+```
+rostopic pub -1 /wx200/elbow_controller/command std_msgs/Float64 "data: 1.0"
+```
+5. Move waist
+```
+rostopic pub -1 /wx200/waist_controller/command std_msgs/Float64 "data: 0.7"
+```
+
+```
+rostopic pub -1 /wx200/waist_controller/command std_msgs/Float64 "data: -0.7"
+```
+6. Gripper movement
+```
+rostopic pub -1 /wx200/left_finger_controller/command std_msgs/Float64 "data: -0.037"
+```
+
+```
+rostopic pub -1 /wx200/left_finger_controller/command std_msgs/Float64 "data: 0.015"
+```
+
+```
+rostopic pub -1 /wx200/right_finger_controller/command std_msgs/Float64 "data: -0.015"
+```
+
+
+
+
+
+
 ## Measures of Success
 
-*You have already defined these measures of success (MoS) in your proposal, and updated them after your progress report.  The purpose of this section is to highlight how well you did.  Also, these MoS will be useful in assigning partial credit.*
-
-*The MoS summary should be in table form.  A sample is provided below:*
 <TABLE>
 <TR>
-	<TH>Measure of Success (from your PROPOSAL)</TH>
+	<TH>Measure of Success (from PROPOSAL)</TH>
 	<TH>Status (completion percentage)</TH>
 </TR>
 <TR>
-	<TD>Install PR2 ROS Indigo Package</TD>
-	<TD>100%</TD>
+	<TD>Creation of conveyor belt in Gazebo</TD>
+	<TD>100% (It works totally fine.)</TD>
 </TR>
 <TR>
-	<TD>Write brain reader software to move the robot</TD>
-	<TD>25% (brain reader software detects brain waves, but does not translate to ROS commands.)</TD>
+	<TD>Robotic arm can lift stationary object</TD>
+	<TD>50% (We can move our robot in gazebo world, but couldn't extract the position of the objects to reach, therefore, it's reamin undone.)</TD>
+</TR>
+<TR>
+	<TD>Robotic arm can move to specific location and release object</TD>
+	<TD>50% (Robotic arm can move to a speicific location and function its gripper, but as we are unable to pick up object, so this task is also incomplete.)</TD>
+</TR>
+<TR>
+	<TD>Robotic arm can pick and place objects that were initially moving</TD>
+	<TD>50% (As we have mentioned previously, we couldn't extract the position of the objects to reach, therefore, it's reamin undone.)</TD>
+</TR>
+<TR>
+	<TD>Robot can differentiate between items of different colors</TD>
+	<TD>0% (We didn't get any chance to explore this goal)</TD>
 </TR>
 </TABLE>
 
-*NOTE 1:  I have your proposals...don't move the goal posts!*
 
-*NOTE 2:  For activities less than 100% complete, you should differentiate between what you completed and what you were unable to complete. I suggest you add details in a bullet list below.* 
-
-
----
 
 ## What did you learn from this project?
 
-*For example, what concepts from class do you now have a solid understanding of?  What new techniques did you learn?*
+* It was our very first experience to work with moveit, we did it from scratch. We did the interface of moveit with gazebo
 
-*Also, what challenges did you face, and how did you overcome these?  Be specific.*
+* We explored to work with industrial robotic arm, which we never did before
+
+* We figured out how to work with moving objects
+
+* We did all the coding by exploring the datasheet of the robotic arm, therefore, we have gained the confidence that we can work with something totally new
 
 ---
 
 ## Future Work
 
-*If a student from next year's class wants to build upon your project, what would you suggest they do?  What suggestions do you have to help get them started (e.g., are there particular Websites they should check out?).*
+Prime challenge we have faced in this project is to find a proper robotic arm for ROS Noetic version as most of the available robotic arm available online are compatible for previous ROS versions and also built-in libraries are dveloped with cpp rather than python. But whoever work in future, can use our basic functioning code and installation guide to setup the environment for the robot. As we left some unfinished business of pick and place object in gazebo world, so future students can do the synchronization of our gazebo world of conveyor belt with robotic arm movements which will enable them to complete the pick and place taks successfully. In next stage, they can try to implement their code on real physical robot to see how their algorithm works. 
 
 ---
 
