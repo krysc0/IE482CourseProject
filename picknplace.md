@@ -151,7 +151,7 @@ press `Ctrl-C` and wait for the processes to end
 
 ---
 
-## Bonus Section - Guideline to play with the basic functions of the robot
+## Additional Section - Guideline to play with the basic functions of the robot
 
 **NB:This is totally sperated from previous sections, one can run only this section of tutorial to see the basic functions of the robot, don't need to run previous sections.**
 
@@ -163,8 +163,21 @@ git clone https://github.com/Interbotix/interbotix_ros_manipulators.git
 
 ```
 cd ~
-cd interbotix_ros_manipulators\interbotix_ros_xsarms
+cd interbotix_ros_manipulators/interbotix_ros_xsarms
 ```
+
+Now copy following folders to catkin_ws/src:
+interbotix_xsarm_control, interbotix_xsarm_descriptions, interbotix_xsarm_gazebo, interbotix_xsarm_perception, interbotix_xsarm_ros_control
+
+Now run the following command to build all necessary packages:
+
+```
+catkin clean -y
+```
+```
+catkin_make
+```
+
 
 
 ### 2. Running commands for movement
