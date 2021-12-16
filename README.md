@@ -13,7 +13,9 @@ Team Members:
 Our project is about simulating a robotic arm in gazebo performing a pick and place task. We have used an nterbotix robotic arm and a customized gazebo world. We used moveit platform to interact with the robotic arm.
 
 ### Contributions
+
 One of the main contribution of our project is there is no sufficient resource for beginners to work with robotic arm in ROS Noetic. Our project will provide a head start to those who want to work with industrial automation in ROS Noetic.
+
 ---
 
 ## Installation Instructions
@@ -143,8 +145,7 @@ press `Ctrl-C` and wait for the processes to end
 ---
 ## Understanding the Code
 The custom launch file used is a modified version of the `xsarm_moveit.launch` file located in the `interbotix_xsarm_moveit package`.Using the paramter "use_gazebo" and a custom gazebo world this launch file, when run, launches rviz and gazebo with the custom world, the robot model, the robot description and the robot's move groups. 
-
-
+![xsarm moveit flowchart](/images/xsarm_moveit_flowchart.png)
 
 ## Additional Section - Guideline to play with the basic functions of the robot
 **NB:This is totally sperated from previous sections, one can run only this section of tutorial to see the basic functions of the robot, don't need to run previous sections.**
