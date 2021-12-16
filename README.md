@@ -10,11 +10,10 @@ Team Members:
 
 ## Project Description
 
-Our project is about simulate a robotic arm in gazebo performing pick and place task. We have used interbotix robotics arm and a customized gazebo world with conveyor belt. We used moveit platform to interact with gazebo.
+Our project is about simulating a robotic arm in gazebo performing a pick and place task. We have used an nterbotix robotic arm and a customized gazebo world. We used moveit platform to interact with the robotic arm.
 
 ### Contributions
-One of the main contribution of our project is there is no sufficient resource for begineers to work with robotic arm in ROS Noetic. Our project will provide a head start to those who wants to work with industrial automation in ROS Noetic.
-
+One of the main contribution of our project is there is no sufficient resource for beginners to work with robotic arm in ROS Noetic. Our project will provide a head start to those who want to work with industrial automation in ROS Noetic.
 ---
 
 ## Installation Instructions
@@ -142,38 +141,15 @@ Then return to the terminal you launched Gazebo in
 press `Ctrl-C` and wait for the processes to end
 
 ---
+## Understanding the Code
+The custom launch file used is a modified version of the `xsarm_moveit.launch` file located in the `interbotix_xsarm_moveit package`.Using the paramter "use_gazebo" and a custom gazebo world this launch file, when run, launches rviz and gazebo with the custom world, the robot model, the robot description and the robot's move groups. 
+
+
 
 ## Additional Section - Guideline to play with the basic functions of the robot
-
-
 **NB:This is totally sperated from previous sections, one can run only this section of tutorial to see the basic functions of the robot, don't need to run previous sections.**
 
-### 1. Downloads and Installation
-```
-cd ~
-git clone https://github.com/Interbotix/interbotix_ros_manipulators.git
-```
-
-```
-cd ~
-cd interbotix_ros_manipulators/interbotix_ros_xsarms
-```
-
-Now copy following folders to catkin_ws/src:
-interbotix_xsarm_control, interbotix_xsarm_descriptions, interbotix_xsarm_gazebo, interbotix_xsarm_perception, interbotix_xsarm_ros_control
-
-Now run the following command to build all necessary packages:
-
-```
-catkin clean -y
-```
-```
-catkin_make
-```
-
-
-
-### 2. Running commands for movement
+### 1. Running commands for movement
 1. Launching the world
 ```
 roslaunch interbotix_xsarm_gazebo xsarm_gazebo.launch robot_model:=wx200 dof:=5 use_position_controllers:=true
@@ -216,11 +192,6 @@ rostopic pub -1 /wx200/left_finger_controller/command std_msgs/Float64 "data: 0.
 rostopic pub -1 /wx200/right_finger_controller/command std_msgs/Float64 "data: -0.015"
 ```
 
-
-
-
-
-
 ## Measures of Success
 
 <TABLE>
@@ -234,11 +205,11 @@ rostopic pub -1 /wx200/right_finger_controller/command std_msgs/Float64 "data: -
 </TR>
 <TR>
 	<TD>Robotic arm can lift stationary object</TD>
-	<TD>50% (We can move our robot in gazebo world, but couldn't extract the position of the objects to reach, therefore, it's reamin undone.)</TD>
+	<TD>75% (We can move our robot in gazebo world, but couldn't extract the position of the objects to reach, therefore, it's reamin undone.)</TD>
 </TR>
 <TR>
 	<TD>Robotic arm can move to specific location and release object</TD>
-	<TD>50% (Robotic arm can move to a speicific location and function its gripper, but as we are unable to pick up object, so this task is also incomplete.)</TD>
+	<TD>75% (Robotic arm can move to a speicific location and function its gripper, but as we are unable to pick up object, so this task is also incomplete.)</TD>
 </TR>
 <TR>
 	<TD>Robotic arm can pick and place objects that were initially moving</TD>
@@ -254,19 +225,16 @@ rostopic pub -1 /wx200/right_finger_controller/command std_msgs/Float64 "data: -
 
 ## What did you learn from this project?
 
-* It was our very first experience to work with moveit, we did it from scratch. We did the interface of moveit with gazebo
-
-* We explored to work with industrial robotic arm, which we never did before
-
+* How to use the moveit move group python interface
+* We explored motions of a robotic arm, which we had never done before
 * We figured out how to work with moving objects
-
-* We did all the coding by exploring the datasheet of the robotic arm, therefore, we have gained the confidence that we can work with something totally new
+* We did all the coding from scratch by exploring the data about the robotic arm, therefore, we have gained the confidence that we can work with something totally new
 
 ---
 
 ## Future Work
 
-Prime challenge we have faced in this project is to find a proper robotic arm for ROS Noetic version as most of the available robotic arm available online are compatible for previous ROS versions and also built-in libraries are dveloped with cpp rather than python. But whoever work in future, can use our basic functioning code and installation guide to setup the environment for the robot. As we left some unfinished business of pick and place object in gazebo world, so future students can do the synchronization of our gazebo world of conveyor belt with robotic arm movements which will enable them to complete the pick and place taks successfully. In next stage, they can try to implement their code on real physical robot to see how their algorithm works. 
+Prime challenge we have faced in this project is to find a proper robotic arm for ROS Noetic version as most of the available robotic arm available online are compatible for previous ROS versions and also built-in libraries are dveloped with cpp rather than python. But in the future our basic functioning code and installation guide can setup the environment for the robot. We left some unfinished business of pick and place object in gazebo world, in the future we'd like to synchronize our gazebo world of a conveyor belt with robotic arm movements which will enable them to complete the pick and place taks successfully. In next stage also, implementation of this code on a real physical robot could be attempted.
 
 ---
 
