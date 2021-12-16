@@ -144,8 +144,11 @@ press `Ctrl-C` and wait for the processes to end
 
 ---
 ## Understanding the Code
-The custom launch file used is a modified version of the `xsarm_moveit.launch` file located in the `interbotix_xsarm_moveit package`.Using the paramter "use_gazebo" and a custom gazebo world this launch file, when run, launches rviz and gazebo with the custom world, the robot model, the robot description and the robot's move groups. 
+The custom launch file used is a modified version of the `xsarm_moveit.launch` file located in the `interbotix_xsarm_moveit package`.Using the paramter "use_gazebo" and a custom gazebo world this launch file, when run, launches rviz and gazebo with the custom world, the robot model, the robot description and the robot's move groups. All the packages of concern containing files launched can be found in the `interbotix_ros_manipulators` directory. The toolboxes and core directories contain more "behind the scenes" files. The Interbotix github repository contains additional information on what each package does individually.  
 ![xsarm moveit flowchart](/images/xsarm_moveit_flowchart.png)
+
+This code can be used with any of the Interbotix xs robotic arms simply by changing the `robot_model` and `robot_name` parameters in `xsarm_moveit.launch`. Specifically this project used the Pincher X100 shown below. 
+![pincher x 100](/images/pincher_x_100.jpg)
 
 ## Additional Section - Guideline to play with the basic functions of the robot
 **NB:This is totally sperated from previous sections, one can run only this section of tutorial to see the basic functions of the robot, don't need to run previous sections.**
